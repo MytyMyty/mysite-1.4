@@ -1,0 +1,8 @@
+<input class="controls" type="text" name="nombre" id="nombres" placeholder="Ingrese su Nombre" required>
+            <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese sus Apellidos" required>
+            <input class="controls" type="email" name="mail" id="correo" placeholder="Ingrese su Correo" required>
+            <input class="controls" type="password" name="contrasenna" id="contrasena" placeholder="Ingrese su Contraseña" required>
+            <input class="controls" type="password" name="contrasenna2" id="recontrasena" placeholder="Re-Ingrese su Contraseña" required>
+            <label for="fecha_nacimiento">Fecha de Nacimiento</label>
+            <input class="controls" type="date" name="fecha_nacimiento" id="fecha-nacimiento" value="2009-01-01" min="1900-01-01" max="2009-01-01" required>
+            <p>Estoy de acuerdo con los <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUXbmV2ZXIgZ29ubmEgZ2l2ZSB5b3UgdXA%3D">Terminos y Condiciones</a></p>

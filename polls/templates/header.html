@@ -1,0 +1,60 @@
+{% load static %}
+<html>
+    <head>
+    </head>
+    <body>
+        <header class="header">
+            <script src="{% static 'js/scrip.js' %}"></script>
+            <div class="menu container">
+                <a href="{% url 'home' %}" class="logo">UniversoCamiseta</a>
+                <input type="checkbox" id="menu" />
+                <label for="menu">
+                    <img src="{% static 'img/menu.png' %}" class="menu-icono" alt="menu">
+                </label>
+                <nav class="navbar">
+                    <ul>
+                        <li><a href="{% url 'home' %}">Inicio</a></li>
+                        <li><a href="{% url 'camisetas' %}">Camisetas</a></li>
+                        <li><a href="{% url 'botines' %}">Botines</a></li>
+                        <li><a href="{% url 'guantes' %}">Guantes</a></li>
+                        <li><a href="#">Contactos</a></li>
+                        <li><a href="#">Nosotros</a></li>
+                        
+                    </ul>
+                </nav>
+                <div>
+                    <ul>
+                        <script src="{% static 'js/scrip.js' %}"></script>
+                        <li class="submenu">
+                            <img src="{% static 'img/car.svg' %}" id="img-carrito" alt="carrito">
+                            <div id="carrito">
+                                <table id="lista-carrito">
+                                    <thead>
+                                        <tr>
+                                            <th>Imagen</th>
+                                            <th>Nombre</th>
+                                            <th>Precio</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                                <a  id="ir_pago" class="btn-4">Inicie Sesion para Pagar</a>
+                                <a href="#" id="vaciar-carrito" class="btn-2">Vaciar Carrito</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                {% if user.is_authenticated %}
+                    <li><a class="btn-3" href="{% url 'logout' %}">Cerrar Sesion</a></li>
+                    
+                {% else %}
+
+                    <li><a class="btn-3" href="{% url 'login' %}">Inicio Sesion</a></li>
+                    <li><a class="btn-3-1" href="{% url 'registrar_user' %}"> Registrate </a></li>
+
+                {% endif %}
+            </div>    
+        </header>  
+    </body>
+</html>

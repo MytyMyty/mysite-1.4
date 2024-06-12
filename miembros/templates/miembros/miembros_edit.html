@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div style=" text -align :center;">
+        {% if miembros %}
+            <h2>Actualizar datos de Miembro</h2><br>
+
+            <form action="{% url 'miembrosUpdate' %}" method="POST">
+                {% csrf_token %}
+
+                <pre>Rut:       <input type="text" name="rut" value="{{miembros.rut}}"></pre>
+                <pre>Mail:      <input type="text" name="mail" value="{{miembros.mail}}"></pre>
+                <pre>Nombre:      <input type="text" name="nombre" value="{{miembros.nombre}}"></pre>
+                <pre>Apellidos:      <input type="text" name="apellidos" value="{{miembros.apellidos}}"></pre>
+                <pre>Fecha Nacimiento:      <input type="date" name="fecnac" value="{{miembros.fecnac}}"></pre>
+
+                <input type="submit" name="opcion" value="Actualizar">
+
+            </form> <br> <br>
+        {% endif %}
+        <div id="idMensajes">
+            {% if mensaje %}
+            {{mensaje}}
+            {% endif %}
+        </div>
+        <br><br>
+        <a href="{% url 'crud' %}">Volver </a>
+    </div>
+</body>
+</html>

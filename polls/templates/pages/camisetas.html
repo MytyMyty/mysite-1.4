@@ -1,0 +1,780 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camisetas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/style3.css' %}">
+</head>
+<body>
+    {% include "header.html" %} 
+    <main class="products container" id="lista-1">
+        <h2>Camisetas de Futbol</h2>
+        <div class="container">
+            <div class="row text-center py-5">
+                <div class="col-md-3 col-sm-6 my-3 my-md-0">
+                    <form action="index1.php" method="POST">
+                        <div class="card shadow">
+                            <div>
+                                <img src="{% static 'img/2.png' %}" alt="Image1" class="img-fluid card-img-top">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">NIKE</h5>
+                                <h6>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </h6>
+                                <p class="card-text">
+                                Camiseta Brasil Visita Azul
+                                </p>
+                                <h5>
+                                    <small><s class="text-secondary">$68.990</s></small>
+                                    <span class="precio">$55.990</span>
+                                </h5>
+                                <ba type="submit" class="agregar-carrito btn btn-warning my-3" name="add">Añadir al Carrito <i class="fas fa-shopping-cart"></i></ba>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-3 col-sm-6 my-3 my-md-0">
+                    <form action="index1.php" method="POST">
+                        <div class="card shadow">
+                            <div>
+                                <img src="{% static 'img/8.png' %}" alt="Image1" class="img-fluid card-img-top">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">NIKE</h5>
+                                <h6>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </h6>
+                                <p class="card-text">
+                                Camiseta Portugal Local
+                                </p>
+                                <h5>
+                                    <small><s class="text-secondary">$68.990</s></small>
+                                    <span class="precio">$51.990</span>
+                                </h5>
+                                <a type="submit" class="agregar-carrito btn btn-warning my-3" name="add">Añadir al Carrito <i class="fas fa-shopping-cart"></i></a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-3 col-sm-6 my-3 my-md-0">
+                    <form action="index1.php" method="POST">
+                        <div class="card shadow">
+                            <div>
+                                <img src="{% static 'img/19.png' %}" alt="Image1" class="img-fluid card-img-top">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">NIKE</h5>
+                                <h6>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </h6>
+                                <p class="card-text">
+                                Camiseta Francia Visita 
+                                </p>
+                                <h5>
+                                    <small><s class="text-secondary">$68.990</s></small>
+                                    <span class="precio">$54.990</span>
+                                </h5>
+                                <a type="submit" class="agregar-carrito btn btn-warning my-3" name="add">Añadir al Carrito <i class="fas fa-shopping-cart"></i></a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-3 col-sm-6 my-3 my-md-0">
+                    <form action="index1.php" method="POST">
+                        <div class="card shadow">
+                            <div>
+                                <img src="{% static 'img/4.png' %}" alt="Image1" class="img-fluid card-img-top">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">NIKE</h5>
+                                <h6>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </h6>
+                                <p class="card-text">
+                                    Camiseta Manchester United
+                                </p>
+                                <h5>
+                                    <small><s class="text-secondary">$68.990</s></small>
+                                    <span class="precio">$56.990</span>
+                                </h5>
+                                <a type="submit" class="agregar-carrito btn btn-warning my-3" name="add" data-id="1">Añadir al Carrito <i class="fas fa-shopping-cart"></i></a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-3 col-sm-6 my-3 my-md-0">
+                    <form action="index1.php" method="POST">
+                        <div class="card shadow">
+                            <div>
+                                <img src="{% static 'img/14.png' %}" alt="Image1" class="img-fluid card-img-top">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">APUMA</h5>
+                                <h6>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </h6>
+                                <p class="card-text">
+                                    Camiseta Camerun Local
+                                </p>
+                                <h5>
+                                    <small><s class="text-secondary">$65.990</s></small>
+                                    <span class="precio">$57.990</span>
+                                </h5>
+                                <a type="submit" class="agregar-carrito btn btn-warning my-3" name="add" data-id="1">Añadir al Carrito <i class="fas fa-shopping-cart"></i></a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-3 col-sm-6 my-3 my-md-0">
+                    <form action="index1.php" method="POST">
+                        <div class="card shadow">
+                            <div>
+                                <img src="{% static 'img/15.png' %}" alt="Image1" class="img-fluid card-img-top">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">ADIDAS</h5>
+                                <h6>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </h6>
+                                <p class="card-text">
+                                    Camiseta Alemania Visita
+                                </p>
+                                <h5>
+                                    <small><s class="text-secondary">$70.990</s></small>
+                                    <span class="precio">$57.990</span>
+                                </h5>
+                                <a type="submit" class="agregar-carrito btn btn-warning my-3" name="add" data-id="1">Añadir al Carrito <i class="fas fa-shopping-cart"></i></a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-3 col-sm-6 my-3 my-md-0">
+                    <form action="index1.php" method="POST">
+                        <div class="card shadow">
+                            <div>
+                                <img src="{% static 'img/1.png' %}" alt="Image1" class="img-fluid card-img-top">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">NIKE</h5>
+                                <h6>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </h6>
+                                <p class="card-text">
+                                    Camiseta Manchester City Local
+                                </p>
+                                <h5>
+                                    <small><s class="text-secondary">$68.990</s></small>
+                                    <span class="precio">$54.990</span>
+                                </h5>
+                                <a type="submit" class="agregar-carrito btn btn-warning my-3" name="add" data-id="1">Añadir al Carrito <i class="fas fa-shopping-cart"></i></a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-3 col-sm-6 my-3 my-md-0">
+                    <form action="index1.php" method="POST">
+                        <div class="card shadow">
+                            <div>
+                                <img src="{% static 'img/5.png' %}" alt="Image1" class="img-fluid card-img-top">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">ADIDAS</h5>
+                                <h6>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </h6>
+                                <p class="card-text">
+                                    Camiseta AC Milan Visita
+                                </p>
+                                <h5>
+                                    <small><s class="text-secondary">$70.990</s></small>
+                                    <span class="precio">$55.990</span>
+                                </h5>
+                                <a type="submit" class="agregar-carrito btn btn-warning my-3" name="add" data-id="1">Añadir al Carrito <i class="fas fa-shopping-cart"></i></a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-3 col-sm-6 my-3 my-md-0">
+                    <form action="index1.php" method="POST">
+                        <div class="card shadow">
+                            <div>
+                                <img src="{% static 'img/17.png' %}" alt="Image1" class="img-fluid card-img-top">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">ADIDAS</h5>
+                                <h6>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </h6>
+                                <p class="card-text">
+                                    Camiseta Real Madrid Local
+                                </p>
+                                <h5>
+                                    <small><s class="text-secondary">$70.990</s></small>
+                                    <span class="precio">$58.990</span>
+                                </h5>
+                                <a type="submit" class="agregar-carrito btn btn-warning my-3" name="add" data-id="1">Añadir al Carrito <i class="fas fa-shopping-cart"></i></a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-3 col-sm-6 my-3 my-md-0">
+                    <form action="index1.php" method="POST">
+                        <div class="card shadow">
+                            <div>
+                                <img src="{% static 'img/13.png' %}" alt="Image1" class="img-fluid card-img-top">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">NIKE</h5>
+                                <h6>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </h6>
+                                <p class="card-text">
+                                    Camiseta Nueva Zelanda Local
+                                </p>
+                                <h5>
+                                    <small><s class="text-secondary">$68.990</s></small>
+                                    <span class="precio">$50.990</span>
+                                </h5>
+                                <a type="submit" class="agregar-carrito btn btn-warning my-3" name="add" data-id="1">Añadir al Carrito <i class="fas fa-shopping-cart"></i></a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-3 col-sm-6 my-3 my-md-0">
+                    <form action="index1.php" method="POST">
+                        <div class="card shadow">
+                            <div>
+                                <img src="{% static 'img/10.png' %}" alt="Image1" class="img-fluid card-img-top">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">NIKE</h5>
+                                <h6>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </h6>
+                                <p class="card-text">
+                                    Camiseta Francia Visita Cuello
+                                </p>
+                                <h5>
+                                    <small><s class="text-secondary">$68.990</s></small>
+                                    <span class="precio">$53.990</span>
+                                </h5>
+                                <a type="submit" class="agregar-carrito btn btn-warning my-3" name="add" data-id="1">Añadir al Carrito <i class="fas fa-shopping-cart"></i></a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-3 col-sm-6 my-3 my-md-0">
+                    <form action="index1.php" method="POST">
+                        <div class="card shadow">
+                            <div>
+                                <img src="{% static 'img/26.png' %}" alt="Image1" class="img-fluid card-img-top">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">UMBRO</h5>
+                                <h6>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </h6>
+                                <p class="card-text">
+                                    Camiseta U Catolica Local
+                                </p>
+                                <h5>
+                                    <small><s class="text-secondary">$68.990</s></small>
+                                    <span class="precio">$53.990</span>
+                                </h5>
+                                <a type="submit" class="agregar-carrito btn btn-warning my-3" name="add" data-id="1">Añadir al Carrito <i class="fas fa-shopping-cart"></i></a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-3 col-sm-6 my-3 my-md-0">
+                    <form action="index1.php" method="POST">
+                        <div class="card shadow">
+                            <div>
+                                <img src="{% static 'img/27.png' %}" alt="Image1" class="img-fluid card-img-top">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">PUMA</h5>
+                                <h6>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </h6>
+                                <p class="card-text">
+                                    Camiseta Chile Local
+                                </p>
+                                <h5>
+                                    <small><s class="text-secondary">$68.990</s></small>
+                                    <span class="precio">$55.990</span>
+                                </h5>
+                                <a type="submit" class="agregar-carrito btn btn-warning my-3" name="add" data-id="1">Añadir al Carrito <i class="fas fa-shopping-cart"></i></a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-3 col-sm-6 my-3 my-md-0" name="op">
+                    <form action="index1.php" method="POST">
+                        <div class="card shadow">
+                            <div>
+                                <img src="{% static 'img/28.png' %}" alt="Image1" class="img-fluid card-img-top">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">ADIDAS</h5>
+                                <h6>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </h6>
+                                <p class="card-text">
+                                    Camiseta Juventus Local Oro
+                                </p>
+                                <h5>
+                                    <small><s class="text-secondary">$70.990</s></small>
+                                    <span class="precio">$58.990</span>
+                                </h5>
+                                <a type="submit" class="agregar-carrito btn btn-warning my-3" name="add" data-id="1">Añadir al Carrito <i class="fas fa-shopping-cart"></i></a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-3 col-sm-6 my-3 my-md-0">
+                    <form action="index1.php" method="POST">
+                        <div class="card shadow">
+                            <div>
+                                <img src="{% static 'img/11.png' %}" alt="Image1" class="img-fluid card-img-top">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">NIKE</h5>
+                                <h6>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </h6>
+                                <p class="card-text">
+                                    Camiseta AC Roma Local Rojo Vino
+                                </p>
+                                <h5>
+                                    <small><s class="text-secondary">$68.990</s></small>
+                                    <span class="precio">$55.990</span>
+                                </h5>
+                                <a type="submit" class="agregar-carrito btn btn-warning my-3" name="add" data-id="1">Añadir al Carrito <i class="fas fa-shopping-cart"></i></a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-3 col-sm-6 my-3 my-md-0">
+                    <form action="index1.php" method="POST">
+                        <div class="card shadow">
+                            <div>
+                                <img src="{% static 'img/18.png' %}" alt="Image1" class="img-fluid card-img-top">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">NIKE</h5>
+                                <h6>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </h6>
+                                <p class="card-text">
+                                    Camiseta Manchester UTD Local Rojo
+                                </p>
+                                <h5>
+                                    <small><s class="text-secondary">$68.990</s></small>
+                                    <span class="precio">$57.990</span>
+                                </h5>
+                                <a type="submit" class="agregar-carrito btn btn-warning my-3" name="add" data-id="1">Añadir al Carrito <i class="fas fa-shopping-cart"></i></a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-3 col-sm-6 my-3 my-md-0">
+                    <form action="index1.php" method="POST">
+                        <div class="card shadow">
+                            <div>
+                                <img src="{% static 'img/3.png' %}" alt="Image1" class="img-fluid card-img-top">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">ADIDAS</h5>
+                                <h6>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </h6>
+                                <p class="card-text">
+                                    Camiseta España Local Roja 22/23
+                                </p>
+                                <h5>
+                                    <small><s class="text-secondary">$70.990</s></small>
+                                    <span class="precio">$57.990</span>
+                                </h5>
+                                <a type="submit" class="agregar-carrito btn btn-warning my-3" name="add" data-id="1">Añadir al Carrito <i class="fas fa-shopping-cart"></i></a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-3 col-sm-6 my-3 my-md-0">
+                    <form action="index1.php" method="POST">
+                        <div class="card shadow">
+                            <div>
+                                <img src="{% static 'img/21.png' %}" alt="Image1" class="img-fluid card-img-top">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">NIKE</h5>
+                                <h6>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </h6>
+                                <p class="card-text">
+                                    Camiseta Portugal Visita Blanca 17/18
+                                </p>
+                                <h5>
+                                    <small><s class="text-secondary">$68.990</s></small>
+                                    <span class="precio">$54.990</span>
+                                </h5>
+                                <a type="submit" class="agregar-carrito btn btn-warning my-3" name="add" data-id="1">Añadir al Carrito <i class="fas fa-shopping-cart"></i></a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-3 col-sm-6 my-3 my-md-0">
+                    <form action="index1.php" method="POST">
+                        <div class="card shadow">
+                            <div>
+                                <img src="{% static 'img/12.png' %}" alt="Image1" class="img-fluid card-img-top">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">NIKE</h5>
+                                <h6>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </h6>
+                                <p class="card-text">
+                                    Camiseta Barca Local Blaugrana 13/14
+                                </p>
+                                <h5>
+                                    <small><s class="text-secondary">$68.990</s></small>
+                                    <span class="precio">$56.990</span>
+                                </h5>
+                                <a type="submit" class="agregar-carrito btn btn-warning my-3" name="add" data-id="1">Añadir al Carrito <i class="fas fa-shopping-cart"></i></a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-3 col-sm-6 my-3 my-md-0">
+                    <form action="index1.php" method="POST">
+                        <div class="card shadow">
+                            <div>
+                                <img src="{% static 'img/16.png' %}" alt="Image1" class="img-fluid card-img-top">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">ADIDAS</h5>
+                                <h6>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </h6>
+                                <p class="card-text">
+                                    Camiseta AC Milan Local
+                                </p>
+                                <h5>
+                                    <small><s class="text-secondary">$70.990</s></small>
+                                    <span class="precio">$55.990</span>
+                                </h5>
+                                <a type="submit" class="agregar-carrito btn btn-warning my-3" name="add" data-id="1">Añadir al Carrito <i class="fas fa-shopping-cart"></i></a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-3 col-sm-6 my-3 my-md-0">
+                    <form action="index1.php" method="POST">
+                        <div class="card shadow">
+                            <div>
+                                <img src="{% static 'img/6.png' %}" alt="Image1" class="img-fluid card-img-top">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">ADIDAS</h5>
+                                <h6>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </h6>
+                                <p class="card-text">
+                                    Camiseta SL Benfica Local
+                                </p>
+                                <h5>
+                                    <small><s class="text-secondary">$70.990</s></small>
+                                    <span class="precio">$57.990</span>
+                                </h5>
+                                <a type="submit" class="agregar-carrito btn btn-warning my-3" name="add" data-id="1">Añadir al Carrito <i class="fas fa-shopping-cart"></i></a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-3 col-sm-6 my-3 my-md-0">
+                    <form action="index1.php" method="POST">
+                        <div class="card shadow">
+                            <div>
+                                <img src="{% static 'img/7.png' %}" alt="Image1" class="img-fluid card-img-top">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">ADIDAS</h5>
+                                <h6>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </h6>
+                                <p class="card-text">
+                                    Camiseta Argentina Local
+                                </p>
+                                <h5>
+                                    <small><s class="text-secondary">$68.990</s></small>
+                                    <span class="precio">$54.990</span>
+                                </h5>
+                                <a type="submit" class="agregar-carrito btn btn-warning my-3" name="add" data-id="1">Añadir al Carrito <i class="fas fa-shopping-cart"></i></a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-3 col-sm-6 my-3 my-md-0">
+                    <form action="index1.php" method="POST">
+                        <div class="card shadow">
+                            <div>
+                                <img src="{% static 'img/9.png' %}" alt="Image1" class="img-fluid card-img-top">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">NIKE</h5>
+                                <h6>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </h6>
+                                <p class="card-text">
+                                    Camiseta FC Barcelona Local
+                                </p>
+                                <h5>
+                                    <small><s class="text-secondary">$70.990</s></small>
+                                    <span class="precio">$55.990</span>
+                                </h5>
+                                <a type="submit" class="agregar-carrito btn btn-warning my-3" name="add" data-id="1">Añadir al Carrito <i class="fas fa-shopping-cart"></i></a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-3 col-sm-6 my-3 my-md-0">
+                    <form action="index1.php" method="POST">
+                        <div class="card shadow">
+                            <div>
+                                <img src="{% static 'img/22.png' %}" alt="Image1" class="img-fluid card-img-top">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">ADIDAS</h5>
+                                <h6>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </h6>
+                                <p class="card-text">
+                                    Camiseta Colo Colo Visita Roja
+                                </p>
+                                <h5>
+                                    <small><s class="text-secondary">$70.990</s></small>
+                                    <span class="precio">$58.990</span>
+                                </h5>
+                                <a type="submit" class="agregar-carrito btn btn-warning my-3" name="add" data-id="1">Añadir al Carrito <i class="fas fa-shopping-cart"></i></a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-3 col-sm-6 my-3 my-md-0">
+                    <form action="index1.php" method="POST">
+                        <div class="card shadow">
+                            <div>
+                                <img src="{% static 'img/23.png' %}" alt="Image1" class="img-fluid card-img-top">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">ADIDAS</h5>
+                                <h6>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </h6>
+                                <p class="card-text">
+                                    Camiseta Colo Colo Local
+                                </p>
+                                <h5>
+                                    <small><s class="text-secondary">$68.990</s></small>
+                                    <span class="precio">$50.990</span>
+                                </h5>
+                                <a type="submit" class="agregar-carrito btn btn-warning my-3" name="add" data-id="1">Añadir al Carrito <i class="fas fa-shopping-cart"></i></a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-3 col-sm-6 my-3 my-md-0">
+                    <form action="index1.php" method="POST">
+                        <div class="card shadow">
+                            <div>
+                                <img src="{% static 'img/24.png' %}" alt="Image1" class="img-fluid card-img-top">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">ADIDAS</h5>
+                                <h6>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </h6>
+                                <p class="card-text">
+                                    Camiseta U de Chile Local
+                                </p>
+                                <h5>
+                                    <small><s class="text-secondary">$68.990</s></small>
+                                    <span class="precio">$53.990</span>
+                                </h5>
+                                <a type="submit" class="agregar-carrito btn btn-warning my-3" name="add" data-id="1">Añadir al Carrito <i class="fas fa-shopping-cart"></i></a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-3 col-sm-6 my-3 my-md-0">
+                    <form action="index1.php" method="POST">
+                        <div class="card shadow">
+                            <div>
+                                <img src="{% static 'img/25.png' %}" alt="Image1" class="img-fluid card-img-top">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">NIKE</h5>
+                                <h6>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </h6>
+                                <p class="card-text">
+                                    Camiseta U de Chile Visita
+                                </p>
+                                <h5>
+                                    <small><s class="text-secondary">$68.990</s></small>
+                                    <span class="precio">$55.990</span>
+                                </h5>
+                                <a type="submit" class="agregar-carrito btn btn-warning my-3" name="add" data-id="1">Añadir al Carrito <i class="fas fa-shopping-cart"></i></a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-3 col-sm-6 my-3 my-md-0" name="op">
+                    <form action="index1.php" method="POST">
+                        <div class="card shadow">
+                            <div>
+                                <img src="{% static 'img/20.png' %}" alt="Image1" class="img-fluid card-img-top">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">ADIDAS</h5>
+                                <h6>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </h6>
+                                <p class="card-text">
+                                    Camiseta Bayern Munich Local
+                                </p>
+                                <h5>
+                                    <small><s class="text-secondary">$70.990</s></small>
+                                    <span class="precio">$58.990</span>
+                                </h5>
+                                <a type="submit" class="agregar-carrito btn btn-warning my-3" name="add" data-id="1">Añadir al Carrito <i class="fas fa-shopping-cart"></i></a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    {% include "footer.html" %}
+    <script src="{% static 'js/scrip.js' %}"></script>
+</body>
+</html>

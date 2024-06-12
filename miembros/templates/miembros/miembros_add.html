@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="text-align: center;">
+        <h2> Formulario Creacion de Miembros</h2><br>
+        <form action="miembrosAdd" method="POST">
+            {% csrf_token %}
+            <pre>Rut:       <input type="text" name="rut"></pre>
+            <pre>Mail:      <input type="text" name="mail"></pre>
+            <pre>Nombre:      <input type="text" name="nombre"></pre>
+            <pre>Apellidos:      <input type="text" name="apellidos"></pre>
+            <pre>Fecha Nacimiento:      <input type="date" name="fecnac"></pre>
+
+            <input type="submit" name="opcion" value="Agregar">
+
+        </form> <br><br>
+        <a href="{% url 'crud' %}"> Volver </a>
+        <br>
+        <div id="idMensajes">
+            {% if mensaje %}
+                {{mensaje}}
+            {% endif %}
+        </div>
+    </div>
+    
+</body>
+</html>

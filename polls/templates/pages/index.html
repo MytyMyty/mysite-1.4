@@ -1,0 +1,202 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina de Ventas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/style3.css ' %}">
+    <script src="{% static "js/scrip.js" %}"></script>
+</head>
+<body>
+    {% include "header.html" %} 
+    <div>
+        <ul>
+            
+            <li class="submenu">
+                <img src="{% static 'img/car.svg' %}" id="img-carrito" alt="carrito">
+                <div id="carrito">
+                    <table id="lista-carrito">
+                        <thead>
+                            <tr>
+                                <th>Imagen</th>
+                                <th>Nombre</th>
+                                <th>Precio</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                    <a  id="ir_pago" class="btn-4">Inicie Sesion para Pagar</a>
+                    <a href="#" id="vaciar-carrito" class="btn-2">Vaciar Carrito</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="header-content container">
+        <div class="header-img">
+            <ul>
+                <li><img src="{% static 'img/right.png' %}" alt=""></li>
+                <li><img src="{% static 'img/right1.png' %}" alt=""></li>
+                <li><img src="{% static 'img/right2.png' %}" alt=""></li>
+                <li><img src="{% static 'img/right3.png' %}" alt=""></li>
+                <li><img src="{% static 'img/right4.png' %}" alt=""></li>
+            </ul>
+        </div>
+        <div class="header-txt">
+            <h1>¡Tu pasion en cada Prenda!</h1>
+            <p>Más que un deporte, un estilo de vida. Encuentra en Universo Camiseta las mejores camisetas, botines y guantes para tu juego ¡Lleva la pasión a la cancha y juega con estilo!</p>
+            <a href="#" class="btn-1">Más informacion</a>
+        </div>
+    </div>   
+    <section class="ofert container">
+        <div class="ofer-1">
+            <div class="ofert-img">
+                <img src="{% static 'img/f1.png' %}" alt="">
+            </div>
+            <div class="ofert-txt">
+                <h3>Camisetas</h3>
+                <a href="{% url 'camisetas' %}" class="btn-2">Click Aqui</a>
+            </div>
+        </div>
+
+        <div class="ofer-1">
+            <div class="ofert-img">
+                <img src="{% static 'img/f2.png' %}" alt="">
+            </div>
+            <div class="ofert-txt">
+                <h3>Botines</h3>
+                <a href="{% url 'botines' %}" class="btn-2">Click Aqui</a>
+            </div>
+        </div>
+
+        <div class="ofer-1">
+            <div class="ofert-img">
+                <img src="{% static 'img/f3.png' %}" alt="">
+            </div>
+            <div class="ofert-txt">
+                <h3>Guantes</h3>
+                <a href="{% url 'guantes' %}" class="btn-2">Click Aqui</a>
+            </div>
+        </div>
+
+
+    </section>
+
+    <main class="products container" id="lista-1">
+        <h2>Productos Recomendados</h2>
+
+        {% if products %}
+            <div class="container">
+                <div class="row text-center py-5">
+            {% for product in products  %}
+                        <div class="col-md-3 col-sm-6 my-3 my-md-0">
+                            <form action="" method="POST">
+                                <div class="card shadow">
+                                    <div>
+                                        <img src="{{ product.image.url }}" alt="Image1" class="img-fluid card-img-top">
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{ product.marca }}</h5>
+                                        <h6>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                        </h6>
+                                        <p class="card-text">
+                                        {{ product.name }}
+                                        </p>
+                                        <h5>
+                                            <small><s class="text-secondary">${{ product.precio }}</s></small>
+                                            <span class="precio">${{ product.preciod }}</span>
+                                        </h5>
+                                        <ba type="submit" class="agregar-carrito btn btn-warning my-3" name="add">Añadir al Carrito <i class="fas fa-shopping-cart"></i></ba>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+            {% endfor %}
+                </div>
+            </div>
+        {% else %}
+
+            <p>No hay recomendacionees....</p>
+        
+        {% endif %}
+    </main>
+
+    <section class="icons container">
+
+        <div class="icon-1">
+            <div class="icon-img">
+                <img src="{% static 'img/i1.svg' %}" alt="">
+            </div>
+            <div class="icon-txt">
+                <h3>¡Más que un simple adorno!</h3>
+                    <p>Tus poleras no solo se verán increíbles en la cancha o las gradas, ¡también serán protagonistas en tu armario! Diseños llamativos y vibrantes que llenarán de color tu espacio.</p>
+            </div>
+        </div>
+
+        <div class="icon-1">
+            <div class="icon-img">
+                <img src="{% static 'img/i2.svg' %}" alt="">
+            </div>
+            <div class="icon-txt">
+                <h3>¡Planchado perfecto, calidad duradera!</h3>
+                    <p>Olvídate de las arrugas y disfruta de una tela resistente al desgaste. Plancharlas será pan comido y su calidad te acompañará durante mucho tiempo.</p>
+            </div>
+        </div>
+
+        <div class="icon-1">
+            <div class="icon-img">
+                <img src="{% static 'img/i3.svg' %}" alt="">
+            </div>
+            <div class="icon-txt">
+                <h3>¡Dobleces sin preocupaciones!</h3>
+                    <p>No importa si las guardas por un corto o largo tiempo, tus poleras no se deformarán ni perderán su forma. ¡Olvídate de las marcas indeseadas y disfruta de tu colección impecable!</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="blog container">
+
+        <div class="blog-1">
+            <img src="{% static 'img/i1.jpg' %}" alt="">
+            <h3>¡Viste tu pasión!</h3>
+            <p>
+                Las nuevas camisetas de fútbol ya están aquí. Luce tu pasión por tu equipo favorito con las camisetas oficiales de la temporada
+
+            </p>
+        </div>
+
+        <div class="blog-1">
+            <img src="{% static 'img/i2.jpg' %}" alt="">
+            <h3>¡Domina el campo con estilo!</h3>
+            <p>
+                ¿Estás listo para llevar tu juego al siguiente nivel? Descubre los botines de fútbol profesionales y siente la diferencia en cada pisada.
+            </p>
+        </div>
+
+        <div class="blog-1">
+            <img src="{% static 'img/i3.jpg' %}" alt="">
+            <h3>¡Conviértete en un muro infranqueable!</h3>
+            <p>
+                ¿Estás listo para convertirte en el héroe de tu equipo? Equipa tus manos con los guantes de arquero profesionales y detén cada disparo con seguridad.
+            </p>
+        </div>
+
+    </section>
+
+    {% include "footer.html" %}
+
+
+
+
+    <script src="{% static "js/script.js" %}"></script>
+</body>
+</html>

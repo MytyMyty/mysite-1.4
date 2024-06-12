@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'css/style2.css ' %}">
+    <title>Registro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+<body>
+    <section class="form-register">
+        <h4>Registro de Usuario
+        </h4>
+
+        {% if form.errors %}
+        
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong> Error registrando usuario... </strong> 
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        
+        {% endif %}
+        <form action="{%  url 'registrar_user' %} " id="frm" method="POST" class="formulario__register" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form }}
+            
+            <input class="buttons" type="submit" value="Registrar" onclick="ejecutarComprobacion()" >
+            <p><a href="{% url 'login' %}">¿Ya Tengo Cuenta?</a></p>
+        </form>
+    </section>
+</body>
+</html>
+<script type="text/javascript">
+
+    //Ejecuccion de las 2 Funciones de comprobacion
+    function ejecutarComprobacion(){
+        validarPasswords();
+        return validarEmail();
+        validarPasswords();
+    }
+
+    //Funcion para validacion de Contraseñas
+    function validarPasswords(){
+
+        //Obtencion de datos del formulario para corroborar su igualdad
+        var pass= document.getElementById("contrasena").value;
+        var repass= document.getElementById("recontrasena").value;
+
+            if (pass!=repass){
+                alert("Las Contraseñas no Coinciden");
+                document.getElementById("recontrasena").value='';
+                document.getElementById("contrasena").value='';
+                return false;
+            }
+    }
+
+    function validarEmail(){
+                
+                // Obtener input de correo
+                var mailInp = document.getElementById('correo');
+                
+                // Exprexion para validar mail.
+                var validarEmail =  /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/ ;
+            
+                // Comparar mail y ejecutar comprobacion
+                if( validarEmail.test(mailInp.value) ){
+                    return true;
+                }else{
+                    alert('Ingrese Correo Correctamente');
+                    document.getElementById("correo").value='';
+                    return false;
+                }
+    }
+
+</script>

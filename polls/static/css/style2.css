@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+/*
+font-family: 'Oswald', sans-serif;
+font-family: 'Poppins', sans-serif;
+*/
+html {
+    background-image: linear-gradient(to left top,#6c648b, #b6a19e);
+    width: 100%;
+    height: 100%;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.form-register{
+    height: 700px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 30px;
+    font-family: "Oswald",sans-serif;
+    transform: translate(-50%,-50%);
+    width: 600px;
+    background: #FFFFFF;
+    border-radius: 20px;
+    text-align: center;
+    margin: auto;
+    box-shadow: 7px 13px 37px #000;
+}
+
+.form-register h4{
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.controls{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid silver;
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+}
+
+.form-register p {
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 60px;
+}
+
+.form-register a{
+    color: #6c648b;
+    text-decoration: none;
+}
+
+.form-register a:hover{
+    color: #6c648b;
+    text-decoration: underline;
+}
+
+.form-register .buttons{
+    width: 100%;
+    background: #6c648b;
+    border: none;
+    padding: 12px;
+    color: #FFFFFF;
+    margin: 16px 0;
+    font-size: 16px;
+}
