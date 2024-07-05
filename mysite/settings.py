@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'polls',
     'miembros',
+    'cart',
     
 ]
 
@@ -54,6 +55,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'cart.context_processors.cart',
             ],
         },
     },
@@ -114,10 +116,13 @@ STATIC_ROOT= os.path.join(os.path.dirname(BASE_DIR),"static")
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-STATICFILES_DIRS =(os.path.join(BASE_DIR,"static"),
-                   )
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "polls", "static"),
+]
 
-MEDIA_ROOT= os.path.join(BASE_DIR,'polls', 'static', 'img')
-MEDIA_URL='/static/img/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'polls', 'static', 'img')
+MEDIA_URL = '/static/img/'
+
+DATA_UPLOAD_MAX_MEMORY_SIZE = None
 
 

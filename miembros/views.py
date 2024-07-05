@@ -1,10 +1,10 @@
-from django.shortcuts import render,redirect
-from django.contrib.auth import authenticate,login,logout
-from django.contrib import messages
-from django.contrib.auth.forms import UserCreationForm
+from django.shortcuts import render, redirect
+from django.contrib.auth import authenticate, login, logout
 from .forms import RegisterUserForm
 from .models import Miembros
-# Create your views here.
+from django.contrib.auth.decorators import login_required, user_passes_test
+from django.contrib import messages
+
 def login_user(request):
     if request.method == "POST":
         username = request.POST["username"]
@@ -43,6 +43,12 @@ def registrar_usuario(request):
         'form': form ,
 
     })
+
+
+def is_admin_or_moderator(user):
+    return user.is_staff
+@login_required
+@user_passes_test(is_admin_or_moderator, login_url='home')
 
 def crud (request):
     miembros = Miembros.objects.all()
@@ -118,4 +124,3 @@ def miembrosUpdate(request):
         miembros=Miembros.objects.all()
         context={'miembros':miembros}
         return render (request,'miembros/miembros_list.html',context)
-        

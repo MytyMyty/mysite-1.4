@@ -7,6 +7,7 @@ class RegisterUserForm(UserCreationForm):
     email = forms.EmailField()
     first_name = forms.CharField(max_length=50)
     last_name = forms.CharField(max_length=70)
+    password1= forms.CharField(widget=forms.PasswordInput())
     
 
     class Meta:

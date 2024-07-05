@@ -1,0 +1,147 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ category }}</title>
+    <link rel="stylesheet" href="{% static 'css/style4.css' %}">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</head>
+<body>
+    {% include "header.html" %} 
+    <header class="bg-whiteclear py-5">
+        <div class="container px-4 px-lg-5 my-5">
+            <div class="text-center text-black">
+                <h2 class="display-4 fw-bolder">{{ category }}</h2>
+                <p class="lead fw-normal text-black-50 mb-0">Categoria</p>
+            </div>
+        </div>
+    </header>
+    <main class="products container" id="lista-1">
+        {% if products %}
+            <div class="container">
+                <div class="row text-center py-5">
+                {% for product in products  %}
+                    <div class="col-md-3 col-sm-6 my-3 my-md-0">
+                        <form action="" method="POST">
+                            <div class="card shadow">
+                                <div>
+                                    <img src="{{ product.image.url }}" alt="Image1" class="img-fluid card-img-top">
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ product.marca }}</h5>
+                                    <h6>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </h6>
+                                    <p class="card-text">
+                                        {{ product.name }}
+                                    </p>
+                                    <h5>
+                                        <small><s class="text-secondary">${{ product.precio }}</s></small>
+                                        <span class="precio">${{ product.preciod }}</span>
+                                    </h5>
+                                    <button type="button" value="{{ product.id }}" class="btn btn-warning my-3" id="add-cart" >Añadir al Carrito <i class="fas fa-shopping-cart"></i></button>
+                                    <br>
+                                    <a href="{% url 'detalleProduct' product.id %}" class="btn btn-outline-primary">Ver Detalles</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+            {% endfor %}
+            </div>
+        </div>
+        {% else %}
+
+            <p>No hay recomendacionees....</p>
+            
+        {% endif %}
+    </main>
+    <div class="container">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{% static 'img/i1.jpg' %}" class="d-block w-100" alt="...">
+                    <div class="caption">
+                        <h5>¡Viste tu pasión!</h5>
+                        <p>Las nuevas camisetas de fútbol ya están aquí. Luce tu pasión por tu equipo favorito con las camisetas oficiales de la temporada</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'img/i2.jpg' %}" class="d-block w-100" alt="...">
+                    <div class="caption">
+                        <h5>¡Domina el campo con estilo!</h5>
+                        <p>¿Estás listo para llevar tu juego al siguiente nivel? Descubre los botines de fútbol profesionales y siente la diferencia en cada pisada.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'img/i3.jpg' %}" class="d-block w-100" alt="...">
+                    <div class="caption">
+                        <h5>¡Conviértete en un muro infranqueable!</h5>
+                        <p>¿Estás listo para convertirte en el héroe de tu equipo? Equipa tus manos con los guantes de arquero profesionales y detén cada disparo con seguridad.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <section class="icons container">
+
+            <div class="icon-1">
+                <div class="icon-img">
+                    <img src="{% static 'img/i1.svg' %}" alt="">
+                </div>
+                <div class="icon-txt">
+                    <h3>¡Más que un simple adorno!</h3>
+                        <p>Tus poleras no solo se verán increíbles en la cancha o las gradas, ¡también serán protagonistas en tu armario! Diseños llamativos y vibrantes que llenarán de color tu espacio.</p>
+                </div>
+            </div>
+    
+            <div class="icon-1">
+                <div class="icon-img">
+                    <img src="{% static 'img/i2.svg' %}" alt="">
+                </div>
+                <div class="icon-txt">
+                    <h3>¡Planchado perfecto, calidad duradera!</h3>
+                        <p>Olvídate de las arrugas y disfruta de una tela resistente al desgaste. Plancharlas será pan comido y su calidad te acompañará durante mucho tiempo.</p>
+                </div>
+            </div>
+    
+            <div class="icon-1">
+                <div class="icon-img">
+                    <img src="{% static 'img/i3.svg' %}" alt="">
+                </div>
+                <div class="icon-txt">
+                    <h3>¡Dobleces sin preocupaciones!</h3>
+                        <p>No importa si las guardas por un corto o largo tiempo, tus poleras no se deformarán ni perderán su forma. ¡Olvídate de las marcas indeseadas y disfruta de tu colección impecable!</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    {% include "footer.html" %}
+    
+
+
+    <link rel="stylesheet" href="{% static 'css/style6.css' %}">
+  
+</body>
+</html>
