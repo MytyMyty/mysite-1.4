@@ -37,6 +37,13 @@ def category(request, foo):
     except:
         messages.success(request, 'Categoría no encontrada')
         return redirect('home')
+    
+def contacto(request):
+    return render(request, 'pages/contacto.html')
+
+def nosotros(request):
+    return render(request, 'pages/nosotros.html')
+    
 
 def is_admin_or_moderator(user):
     return user.is_staff

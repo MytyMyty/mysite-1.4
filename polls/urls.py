@@ -18,4 +18,8 @@ urlpatterns = [
     
     path('category/<str:foo>', views.category, name="category"),
     
+    path('contacto', views.contacto, name="contacto"),
+    
+    path('nosotros', views.nosotros, name="nosotros"),
+    
 ]

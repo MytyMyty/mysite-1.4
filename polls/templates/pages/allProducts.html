@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todos los Productos</title>
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
     <link rel="stylesheet" href="{% static 'css/style6.css' %}">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
@@ -27,11 +28,11 @@
         <div class="header-txt">
             <h1>¡Tu pasion en cada Prenda!</h1>
             <p>Más que un deporte, un estilo de vida. Encuentra en Universo Camiseta las mejores camisetas, botines y guantes para tu juego ¡Lleva la pasión a la cancha y juega con estilo!</p>
-            <a href="#" class="btn-1">Más informacion</a>
+            <a href="{% url 'nosotros' %}" class="btn-1">Más informacion</a>
         </div>
     </div>   
     <main class="products container" id="lista-1">
-        <h2>Productos Recomendados</h2>
+        <h2>Todos los Productos</h2>
 
         {% if products %}
             <div class="container">
@@ -59,8 +60,6 @@
                                             <small><s class="text-secondary">${{ product.precio }}</s></small>
                                             <span class="precio">${{ product.preciod }}</span>
                                         </h5>
-                                        
-                                        <button type="button" value="{{ product.id }}" class="btn btn-warning my-3" id="add-cart" >Añadir al Carrito <i class="fas fa-shopping-cart"></i></button>
                                         <a href="{% url 'detalleProduct' product.id %}" class="btn btn-outline-primary">Ver Detalles</a>
                                     </div>
                                 </div>

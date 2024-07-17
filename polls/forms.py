@@ -15,7 +15,7 @@ class CategoriasForm(ModelForm):
 class ProductForm(ModelForm):
     class Meta:
         model = Product
-        fields = ('categorias','created_by','slug','image', 'marca', 'name','descripcion','precio', 'preciod', 'es_publicado', 'es_stock')
+        fields = ('categorias','created_by','image', 'marca', 'name','descripcion','precio', 'preciod', 'es_publicado', 'es_stock')
         widgets = {
             'categorias': forms.Select(attrs={'class': 'form-control'}),
             'image': forms.FileInput(attrs={'class': 'form-control'}),

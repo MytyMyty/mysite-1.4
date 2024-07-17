@@ -19,11 +19,12 @@
                         </a>
                         <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
                             <li>
-                                <a href="{% url "home" %}" class="nav-link text-white">
+                                <a href="{% url "home" %}" class="nav-link text-secondary">
                                     <img src="{% static "img/home.png" %}" alt="Inicio" width="24" height="24" class="d-block mx-auto mb-1">
                                     Inicio
                                 </a>
                             </li>
+                            
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle text-secondary" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     <img src="{% static "img/categories1.png" %}" alt="Inicio" width="24" height="24" class="d-block mx-auto mb-1">
@@ -44,13 +45,13 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="/" class="nav-link text-secondary">
+                                <a href="{% url "nosotros"%}" class="nav-link text-secondary">
                                     <img src="{% static "img/nosotros.png" %}" alt="Inicio" width="24" height="24" class="d-block mx-auto mb-1">
                                     Nosotros
                                 </a>
                             </li>
                             <li>
-                                <a href="/" class="nav-link text-secondary">
+                                <a href="{% url "contacto" %}" class="nav-link text-secondary">
                                     <img src="{% static "img/contacto.png" %}" alt="Inicio" width="24" height="24" class="d-block mx-auto mb-1">
                                     Contacto
                                 </a>
@@ -101,4 +102,15 @@
             </div>
         </header> 
     </body>
+
+    
+    <script>
+        $(document).ready(function() {
+            $('.nav-link').on('mouseover', function() {
+                $(this).removeClass('text-secondary').addClass('text-light');
+            }).on('mouseout', function() {
+                $(this).removeClass('text-light').addClass('text-secondary');
+            });
+        });
+    </script>
 </html>
